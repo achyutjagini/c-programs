@@ -1,0 +1,10 @@
+LListDptr: LList_Main_dptr.o LList_Utils_dptr.o 
+	gcc -o LListDptr LList_Main_dptr.o LList_Utils_dptr.o 
+	
+LList_Main_dptr.o : LList_Main_dptr.c s_list_dptr.h
+	gcc -c LList_Main_dptr.c
+LList_Utils_dptr.o : LList_Utils_dptr.c s_list_dptr.h
+	gcc -c LList_Utils_dptr.c
+
+clean :
+	del LListDptr.exe LList_Main_dptr.o LList_Utils_dptr.o 
